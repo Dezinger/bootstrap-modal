@@ -8,11 +8,6 @@
  * Boostrap 4 patch for for bootstrap-modal. Include BEFORE bootstrap-modal.css!
  */
 
-.modal-backdrop.in {
-  filter: alpha(opacity=65);
-  opacity: .65;
-}
-
 .fade.in {
   opacity: 1;
 }
@@ -22,4 +17,9 @@
   -ms-transform: translate(0, 0);
   -o-transform: translate(0, 0);
   transform: translate(0, 0);
+}
+
+.modal-backdrop.in {
+   filter: alpha(opacity=65);
+   opacity: .65;
 }
