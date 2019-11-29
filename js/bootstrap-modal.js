@@ -58,8 +58,9 @@
 			return this[!this.isShown ? 'show' : 'hide']();
 		},
 
-		show: function () {
-			var e = $.Event('show');
+		show: function (_relatedTarget) {
+
+			var e = $.Event('show', { relatedTarget: _relatedTarget });
 
 			if (this.isShown) return;
 
@@ -330,7 +331,7 @@
 
 			if (!data) $this.data('modal', (data = new Modal(this, options)));
 			if (typeof option == 'string') data[option].apply(data, [].concat(args));
-			else if (options.show) data.show()
+			else if (options.show) data.show(args)
 		})
 	};
 
@@ -368,7 +369,7 @@
 
 			e.preventDefault();
 			$target
-				.modal(option)
+				.modal(option, this)
 				.one('hide', function () {
 					$this.focus();
 				})
