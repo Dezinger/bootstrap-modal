@@ -1,0 +1,25 @@
+/*!
+ * Bootstrap Modal
+ *
+ * Copyright Jordan Schroter
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Boostrap 4 patch for for bootstrap-modal. Include BEFORE bootstrap-modal.css!
+ */
+
+.modal-backdrop.in {
+  filter: alpha(opacity=65);
+  opacity: .65;
+}
+
+.fade.in {
+  opacity: 1;
+}
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
